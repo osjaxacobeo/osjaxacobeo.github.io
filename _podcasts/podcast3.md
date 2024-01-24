@@ -2,6 +2,7 @@
 layout: default
 title: Podcast 3
 image: /images/pic05.jpg
+show: true
 ---
 
 # {{ page.title }}

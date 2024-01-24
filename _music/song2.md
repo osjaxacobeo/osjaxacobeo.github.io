@@ -2,6 +2,7 @@
 layout: default
 title: Song 2
 image: /images/pic07.jpg
+show: true
 ---
 
 # Song 2

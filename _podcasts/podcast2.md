@@ -2,6 +2,7 @@
 layout: default
 title: Podcast 2
 image: /images/pic03.jpg
+show: true
 ---
 
 # Podcast 2

@@ -2,7 +2,7 @@
 layout: default
 title: Music
 section: music
-permalink: /music/
+show: false
 ---
 
 # Music Collection

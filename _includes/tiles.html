@@ -15,7 +15,7 @@
 
 	
 	{% for post in section limit:site.front-page-posts %}
-		{% unless post.name == 'index.md' %}
+		{% if post.show %}
 			<article class="style{{ forloop.index | plus:1 }}">
 				<span class="image">
 					<img src="{{ site.url }}{{ site.baseurl }}{{ post.image }}" alt="" />
@@ -29,7 +29,7 @@
 					<!-- </div> -->
 				</a>
 			</article>
-		{% endunless %}
+		{% endif %}
 	{% endfor %}
 	
 	</section>
