@@ -1,18 +1,35 @@
+<script>
+    // JavaScript code to extract the section from the URL
+    var urlSections = window.location.pathname.split('/');
+    var section = urlSections[1]; // Assumes the section is the first part of the path
+
+    // Ensure section is not empty or undefined
+    if (!section) {
+        section = "posts"; // Default to "posts" if no section is found
+    }
+</script>
+
 <section class="tiles">
 
-{% for post in site.posts limit:site.front-page-posts %}
-	<article class="style{{ forloop.index | plus:1 }}">
-		<span class="image">
-			<img src="{{ site.url }}{{ site.baseurl }}{{ post.image }}" alt="" />
-		</span>
-		<a href="{{ post.url | prepend:site.baseurl | prepend:site.url }}">
-			<!-- <h2>{{ post.title }}</h2> -->
-			<!-- <div class="content"> -->
-				<!-- <p>{{ post.url }}</p> -->
-				<!-- <p>{{ post.excerpt }}</p> -->
-			<!-- </div> -->
-		</a>
-	</article>
-{% endfor %}
+	{% assign section = site[page.section] %}
 
-</section>
+	
+	{% for post in section limit:site.front-page-posts %}
+		{% unless post.name == 'index.md' %}
+			<article class="style{{ forloop.index | plus:1 }}">
+				<span class="image">
+					<img src="{{ site.url }}{{ site.baseurl }}{{ post.image }}" alt="" />
+				</span>
+				<a href="{{ post.url | prepend:site.baseurl | prepend:site.url }}">
+					<!-- Uncomment the lines below if you want to display title and excerpt -->
+					<!-- <h2>{{ post.title }}</h2> -->
+					<!-- <div class="content"> -->
+						<!-- <p>{{ post.url }}</p> -->
+						<!-- <p>{{ post.excerpt }}</p> -->
+					<!-- </div> -->
+				</a>
+			</article>
+		{% endunless %}
+	{% endfor %}
+	
+	</section>

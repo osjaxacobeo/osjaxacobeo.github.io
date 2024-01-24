@@ -30,3 +30,15 @@ markdown: kramdown
 
 # Layout settings
 home-link-in-menu: yes
+
+# Collections
+collections:
+  sections:
+    # output: true
+    # permalink: /sections/:path/
+  music:
+    output: true
+    # permalink: /music/:path/
+  podcasts:
+    output: true
+    # permalink: /podcasts/:path/
