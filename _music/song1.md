@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: music
 title: Song 1
 image: /images/pic01.jpg
+audio: /audios/coldplay.mp3
 show: true
 ---
-
-# Song 1
 
 This is a detailed description of Song 1.
